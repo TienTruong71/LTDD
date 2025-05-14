@@ -1,6 +1,7 @@
 package com.example.projectltddclother.Activity;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
 public class FavoritesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FavoriteManager favoriteManager;
+    private ImageButton backBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +37,7 @@ public class FavoritesActivity extends AppCompatActivity {
 
         PopularAdapter adapter = new PopularAdapter(favoriteItems);
         recyclerView.setAdapter(adapter);
+        backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(v -> finish());
     }
 }

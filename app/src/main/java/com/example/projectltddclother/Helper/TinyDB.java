@@ -376,13 +376,13 @@ public class TinyDB {
     }
 
     public <T> T getObject(String key, Class<T> classOfT) {
-
         String json = getString(key);
-        Object value = new Gson().fromJson(json, classOfT);
+        T value = new Gson().fromJson(json, classOfT);
         if (value == null)
             throw new NullPointerException();
-        return (T) value;
+        return value;
     }
+
 
     /**
      * Put int value into SharedPreferences with 'key' and save

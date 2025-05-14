@@ -84,9 +84,9 @@ public class DetailActivity extends AppCompatActivity {
 
     private void updateFavIcon() {
         if (isFavorite) {
-            binding.favBtn.setImageResource(R.drawable.fav_filled); // cần icon trái tim đầy
+            binding.favBtn.setImageResource(R.drawable.fav_filled);
         } else {
-            binding.favBtn.setImageResource(R.drawable.favv); // icon trái tim rỗng
+            binding.favBtn.setImageResource(R.drawable.favv);
         }
     }
 

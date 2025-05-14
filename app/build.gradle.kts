@@ -51,5 +51,6 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth:22.3.1")
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation ("com.google.firebase:firebase-firestore:24.10.2")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 }
