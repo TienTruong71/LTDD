@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "952024749740",
+    "project_id": "projectclother",
+    "storage_bucket": "projectclother.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952024749740:android:d9f233bb0416e8e71c3109",
+        "android_client_info": {
+          "package_name": "com.example.projectltddclother"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfnV7S03zWUKPAgY9fR4-GEcLKRTpI0FY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
