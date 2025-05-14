@@ -31,7 +31,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Model.ItemsModel;
 import com.google.gson.Gson;
 
 import java.io.File;

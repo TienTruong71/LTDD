@@ -1,4 +1,4 @@
-package com.example.projectltddclother.Domain;
+package com.example.projectltddclother.Model;
 
 public class BannerModel {
     private String url;

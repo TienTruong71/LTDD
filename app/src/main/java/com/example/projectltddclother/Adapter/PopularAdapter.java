@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterInside;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.projectltddclother.Activity.DetailActivity;
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Model.ItemsModel;
 import com.example.projectltddclother.databinding.ViewholderPopularBinding;
 
 import java.util.ArrayList;

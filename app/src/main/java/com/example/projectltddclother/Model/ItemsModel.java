@@ -1,4 +1,4 @@
-package com.example.projectltddclother.Domain;
+package com.example.projectltddclother.Model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

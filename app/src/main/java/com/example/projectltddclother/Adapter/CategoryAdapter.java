@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.projectltddclother.Domain.CategoryModel;
+import com.example.projectltddclother.Model.CategoryModel;
 import com.example.projectltddclother.R;
 import com.example.projectltddclother.databinding.ViewholderCategoryBinding;
 

@@ -9,9 +9,6 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -20,7 +17,7 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import com.example.projectltddclother.Adapter.CategoryAdapter;
 import com.example.projectltddclother.Adapter.PopularAdapter;
 import com.example.projectltddclother.Adapter.SliderAdapter;
-import com.example.projectltddclother.Domain.BannerModel;
+import com.example.projectltddclother.Model.BannerModel;
 import com.example.projectltddclother.R;
 import com.example.projectltddclother.ViewModel.MainViewModel;
 import com.example.projectltddclother.databinding.ActivityMainBinding;
@@ -56,16 +53,15 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
                     return true;
                 } else if (itemId == R.id.favorites) {
-                    Toast.makeText(MainActivity.this, "Favorites clicked", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, FavoritesActivity.class));
                     return true;
                 } else if (itemId == R.id.cart) {
                     startActivity(new Intent(MainActivity.this, CartActivity.class));
                     return true;
                 } else if (itemId == R.id.profile) {
-                    Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                     return true;
                 }
-
                 return false;
             }
         });

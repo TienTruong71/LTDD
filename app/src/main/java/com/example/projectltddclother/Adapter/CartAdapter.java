@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Model.ItemsModel;
 import com.example.projectltddclother.Helper.ChangeNumberItemsListener;
 import com.example.projectltddclother.Helper.ManagmentCart;
 import com.example.projectltddclother.databinding.ViewholderCartBinding;

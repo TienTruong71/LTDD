@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Model.ItemsModel;
 
 import java.util.ArrayList;
 

@@ -1,19 +1,16 @@
 package com.example.projectltddclother.Activity;
 
-import android.app.Activity;
 import android.graphics.Paint;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
 import com.example.projectltddclother.Adapter.PicListAdapter;
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Helper.FavoriteManager;
+import com.example.projectltddclother.Model.ItemsModel;
 import com.example.projectltddclother.Helper.ManagmentCart;
 import com.example.projectltddclother.R;
 import com.example.projectltddclother.databinding.ActivityDetailBinding;
@@ -25,16 +22,19 @@ public class DetailActivity extends AppCompatActivity {
     private ItemsModel object;
     private int numberOrder= 1;
     private ManagmentCart managmentCart;
+    private FavoriteManager favoriteManager;
+    private boolean isFavorite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        favoriteManager = new FavoriteManager(this);
         managmentCart = new ManagmentCart(this);
         getBundles();
         initPicList();
-
+        initFavoriteButton();
     }
 
     private void initPicList() {
@@ -66,7 +66,30 @@ public class DetailActivity extends AppCompatActivity {
         });
 
         binding.backBtn.setOnClickListener(v -> finish());
-
-
     }
+    private void initFavoriteButton() {
+        isFavorite = favoriteManager.isFavorite(object);
+        updateFavIcon();
+
+        binding.favBtn.setOnClickListener(v -> {
+            if (isFavorite) {
+                favoriteManager.removeFavorite(object);
+            } else {
+                favoriteManager.addFavorite(object);
+            }
+            isFavorite = !isFavorite;
+            updateFavIcon();
+        });
+    }
+
+    private void updateFavIcon() {
+        if (isFavorite) {
+            binding.favBtn.setImageResource(R.drawable.fav_filled); // cần icon trái tim đầy
+        } else {
+            binding.favBtn.setImageResource(R.drawable.favv); // icon trái tim rỗng
+        }
+    }
+
+
+
 }

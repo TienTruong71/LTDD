@@ -4,9 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.projectltddclother.Domain.BannerModel;
-import com.example.projectltddclother.Domain.CategoryModel;
-import com.example.projectltddclother.Domain.ItemsModel;
+import com.example.projectltddclother.Model.BannerModel;
+import com.example.projectltddclother.Model.CategoryModel;
+import com.example.projectltddclother.Model.ItemsModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

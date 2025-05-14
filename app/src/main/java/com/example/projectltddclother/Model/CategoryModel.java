@@ -1,4 +1,4 @@
-package com.example.projectltddclother.Domain;
+package com.example.projectltddclother.Model;
 
 public class CategoryModel {
     private String title;
